@@ -12,7 +12,6 @@ public class Client {
     private String lastName;
     private String username;
     private String email;
-    private State status;
     private Role role = Role.USER;   
     private String pictureUrl;
 
@@ -47,12 +46,6 @@ public class Client {
     }
     public void setEmail(String email) {
         this.email = email;
-    }
-    public State getStatus() {
-        return status;
-    }
-    public void setStatus(State status) {
-        this.status = status;
     }
     public Role getRole() {
         return role;

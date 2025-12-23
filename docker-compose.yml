@@ -1,6 +1,6 @@
 services:
   client-sba:
-      image: openjdk:23-jdk
+      image: eclipse-temurin:21-jdk
       container_name: client-sba
       ports:
         - 8081:8080
@@ -11,6 +11,8 @@ services:
         - clientdb
       networks:
         - my-net
+      extra_hosts:
+      - "host.docker.internal:host-gateway"
       volumes:
         - ./build/libs/fastgo_client-0.0.1-SNAPSHOT.jar:/app/app.jar
       working_dir: /app
